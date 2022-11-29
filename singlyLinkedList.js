@@ -63,21 +63,6 @@ class SinglyLinkedList {
 
     }
 
-    get(index){
-
-        if(index < 0 || index > this.length) return null
-
-        let counter = 0;
-        let currentHead = this.head 
-
-        while (counter !== index){
-            currentHead = currentHead.next
-            counter++
-        }
-
-        return currentHead // return the element you want to retrieve
-    }
-
     set(index, val){
 
         let findNode = this.get(index) // call the method get to find the node and pass the index as argument
@@ -128,6 +113,21 @@ class SinglyLinkedList {
         }
 
         return current // return the current, which was the value you removed
+    }
+
+    get(index){
+
+        if(index < 0 || index > this.length) return null
+
+        let counter = 0;
+        let currentHead = this.head 
+
+        while (counter !== index){
+            currentHead = currentHead.next
+            counter++
+        }
+
+        return currentHead // return the element you want to retrieve
     }
 
     insert(index, val){
